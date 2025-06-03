@@ -93,3 +93,70 @@
 
 # lista_anidada = [15, True, [25.5, 57.9, 30.6], False]
 # print(lista_anidada)
+
+# for n in range(1, 11):
+#     bandera = False
+#     d = 0
+
+#     for c in range(1, n + 1):
+#         if n % c == 0:
+#             d += 1
+
+#             if d <= 2:
+#                 bandera = True
+#             else:
+#                 bandera = False
+#     if bandera:
+#         print(n, end=" ")
+
+# N = 5
+# A = [0] * N
+# B = [0] * N
+
+# for i in range(N):
+#     A[i] = i + i + i
+
+# for i in range(N):
+#     B[i] = i * 2
+
+# contador = 0
+# for i in range(N):
+#     if A[0] == A[i] and A[0] == B[i]:
+#         contador += 1
+#         N = N - contador
+# resultado = str(contador)
+
+
+
+# if A[0] == 1:
+#     resultado = "VERDADERO"
+# elif A[0] == 2:
+#     resultado = "2"
+# elif A[0] == 3:
+#     resultado = "FALSO"
+
+# print(resultado)
+
+
+dia = int(input("Introduce el valor Nº1: ")) # Dia
+mes = int(input("Introduce el valor Nº2: ")) # Mes
+anio = int(input("Introduce el valor Nº3: ")) # Año
+if mes in [1, 3, 5, 7, 8, 10, 12]:
+    dd = 31
+elif mes in [4, 6, 9, 11]:
+    dd = 30
+elif mes == 2:
+    if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+        dd = 29
+    else:
+        dd = 28
+else:
+    print("A")
+    dd = - 1
+if dd != -1:
+    if dia < 1 or dia > dd:
+        print("B")
+    elif mes < 1 or mes > 12:
+        print("C")
+    else:
+        print("D")
